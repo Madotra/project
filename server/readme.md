@@ -37,4 +37,4 @@ to install this Dependencies we will run the command
  npm install bcryptjs jsonwebtoken
 ***
 
-###### To  accommodate the feature of authorization We are using the method of router Dom Where we will be using the middleware to create the authorization.Account verification is done for creating the new post along with editing and deleting which can only be done by verifying the account jsonwebtoken.
+ To  accommodate the feature of authorization We are using the method of router Dom Where we will be using the middleware to create the authorization.Account verification is done for creating the new post along with editing and deleting which can only be done by verifying the account jsonwebtoken.
