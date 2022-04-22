@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+## Client Folder Proceedings
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My whole Project have 7 features
 
-## Available Scripts
+1. Navigation bar with SignIn/SignUp button.
+2. Account  verification.
+3. Creating new travel post.
+4. Editing the existing post.(but the user can only edit their own post which is achieved by Adding the post creator variable in the post storage in database)
+5. Deletion of post. (user can only delete their own post which is also achieved by the account verification and the post creator verification).
+6. Liking the travel post.(one post can be liked by one user only one time.) 
+7. Handling of the token expiry. User authorization token will expire in one hour and after that the user will be logged out automatically.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### First we create a react application with the command in the client folder:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+***
+npx create-react-app ./
+***
 
-### `npm test`
+this command is placed in the client folder in the project document.
+As this project will have two section first we will have work on client section to create a layout of the home page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Since my project is in a different  folder  iam just installing all the dependencies all at once using the code
+***
+npm install
+***
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## but there are 2 dependencies which i have to install forcefully using the code 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+***
+npm install @material-ui/icons --force
+***
+npm install @material-ui/styles --force
+***
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I am using the material-ui components as it don't take more  modification to modify the looks of the page.
 
-### `npm run eject`
+## i am using the jwt token for the Authorization of the user. To get the token I need to decrypt the token for that I'm using the jwt-decode which was installed using the command
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+***
+npm install jwt-decode
+***
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## To process the authorization we need to use a middleware and to use the middleware we need to use the reactor dom which is installed using the command
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+***
+npm install react-router-dom
+***
